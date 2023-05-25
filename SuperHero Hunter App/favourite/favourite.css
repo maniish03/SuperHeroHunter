@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/* Defining the variables for the CSS. */
+:root {
+    --poppins-font: "Poppins", sans-serif;
+    --dark-color: #019001;
+    --red-color: #f64445;
+    --light-color: #fff;
+    --grey-color: #505050;
+    --yellow-color: #f2c10e;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--red-color);
+    background: -o-linear-gradient(281deg, purple 0%, #611cac 100%);
+    background: linear-gradient(169deg,purple 0%, #611cac 100%);
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 30px;
+    font-size: 1.7rem;
+    line-height: 1.6;
+    font-family: var(--poppins-font);
+}
+
+/* The CSS for the navbar. */
+#main-1 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-size: 25px;
+}
+#nav-bar {
+    left: 0px;
+    right: 0px;
+    display: flex;
+    padding: 15px 30px;
+    background-color: var(--dark-color);
+    color: ivory;
+}
+.nav-items {
+    margin: 0px 20px;
+}
+
+a {
+    color: ivory;
+    text-decoration: none;
+}
+a span {
+    color: var(--red-color);
+}
+.nav-items .fa-heart {
+    color: var(--red-color);
+}
+
+/* The CSS for the Notification. */
+#toast-div {
+    color: var(--light-color);
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity 0.2s ease-in-out;
+    position: fixed;
+    bottom: 30px;
+    left: 10px;
+    background-color: var(--red-color);
+    padding: 5px;
+    font-size: 20px;
+    max-width: 150px;
+    text-align: center;
+}
+
+#nothing-here {
+    text-align: center;
+    margin-top: 30px;
+    display: none;
+}
+#headin-in {
+    background-color: orange;
+}
+
+/* The CSS for the cards. */
+#main-2 {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 25px;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.card-layout {
+    cursor: pointer;
+    padding: 5px;
+    min-width: 200px;
+    max-width: 300px;
+    margin: 30px;
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    font-weight: 300;
+    font-family: var(--poppins-font);
+    font-size: 15px;
+    width: 25%;
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+}
+.card-layout:hover {
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.25), 0 0px 15px rgba(0, 0, 0, 0.22);
+}
+.hero-id {
+    display: none;
+}
+.hero-img-container {
+    width: 100%;
+}
+.hero-img {
+    max-height: 400px;
+    width: 100%;
+}
+.hero-name {
+    text-align: center;
+}
+
+.card-body {
+    font-size: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.starred {
+    color: red;
+    margin-left: auto;
+}
+
+label {
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    #search-bar {
+        flex-direction: column;
+    }
+
+    #superhero-choose {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    #nav-bar {
+        justify-content: center;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .nav-items {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Basic Marvel API app</title>
+
+        <link rel="stylesheet" href="mainStyle.css" />
+
+        <!-- favicon link -->
+        <link rel="shortcut icon" href="./image/icon.png" type="image/x-icon" />
+
+        <!-- font awesome link -->
+        <script
+            src="https://kit.fontawesome.com/a1434bc214.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <!-- This div contains navbar and search bar -->
+        <div id="main-1">
+            <div id="nav-bar">
+                <div class="nav-items">
+                    <a href="./index.html" title="HOME">
+                        Super<span>Hero</span>Hunter
+                    </a>
+                </div>
+                <div class="nav-items">
+                    <a href="favourite/favourite.html">
+                        <i class="fas fa-heart"></i>
+                        Favourites</a
+                    >
+                </div>
+
+                <!-- Search bar -->
+
+                <div id="search-bar">
+                    <div id="superhero-choose">
+                        <!-- <label for="name-input">Superhero Name : </label> -->
+                        <input
+                            type="text"
+                            name="superhero_name"
+                            placeholder="Search your superhero..."
+                            id="name-input"
+                        />
+                    </div>
+                    <div class="btn" id="get-image">Search</div>
+                </div>
+            </div>
+
+            <!-- Hamburger menu for smaller screens -->
+
+            <div id="ham-btn"><i class="fas fa-bars"></i></div>
+
+            <div id="ham-bar">
+                <div class="nav-items">
+                    <a href="./index.html" title="HOME">
+                        Super<span>Hero</span>
+                    </a>
+                </div>
+                <div class="nav-items">
+                    <a href="favourite.html">
+                        <i class="fas fa-heart"></i>
+                        Favourites</a
+                    >
+                </div>
+            </div>
+
+            <!-- div to indicate user to search -->
+
+            <div id="heading-main">
+                <span id="headin-in">
+                    &nbsp; Search Your Favourite Super Heroes here! &nbsp;</span
+                >
+            </div>
+
+            <!-- fixed div to show toasts -->
+            <div id="toast-div">
+                <!-- Error -->
+            </div>
+        </div>
+
+        <!-- div to insert superhero cards -->
+
+        <div id="main-2">
+            <div class="card-layout">
+                <div class="hero-id">122</div>
+                <div class="hero-img-container">
+                    <img
+                        class="hero-img"
+                        src="https://www.superherodb.com/pictures2/portraits/10/100/140.jpg"
+                        alt=""
+                    />
+                </div>
+                <div class="card-body">
+                    <div class="hero-name">Thor</div>
+                    <div class="starred">
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>

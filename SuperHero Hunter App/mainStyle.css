@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/* Defining the variables for the CSS. */
+:root {
+    --poppins-font: "Poppins", sans-serif;
+    --dark-color: #001900;
+    --red-color: #f64445;
+    --light-color: #fff;
+    --grey-color: #505050;
+    --yellow-color: #f2c10e;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--red-color);
+    background: -o-linear-gradient(281deg, cyan 0%, #611cac 100%);
+    background: linear-gradient(169deg, cyan 0%, #611cac 100%);
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 30px;
+    font-size: 1.7rem;
+    line-height: 1.6;
+    font-family: var(--poppins-font);
+}
+
+#main-1 {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-size: 25px;
+}
+
+/* The CSS for the navbar. */
+#nav-bar {
+    left: 0px;
+    right: 0px;
+    display: flex;
+    padding: 11px 30px;
+    background-color: var(--dark-color);
+    color: wheat;
+}
+.nav-items {
+    margin: 0px 20px;
+}
+a {
+    color: wheat;
+    text-decoration: none;
+}
+a span {
+    color: var(--red-color);
+}
+a .fa-heart {
+    color: var(--red-color);
+}
+
+/* The CSS for the search bar. */
+#search-bar {
+    margin-left: auto;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin-right: 20px;
+}
+#superhero-choose {
+    display: flex;
+    /* justify-content: center; */
+}
+#name-input {
+    padding: 2px 10px;
+    border-radius: 10px;
+    margin: 0px 5px;
+    font-size: 20px;
+}
+
+label {
+    text-align: center;
+}
+
+/* The CSS for the buttons. */
+.btn {
+    font-size: 15px;
+    text-align: center;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px 3px black;
+    border: 2px solid var(--grey-color);
+    padding: 5px;
+    color: var(--dark-color);
+    background-color: aqua;
+    cursor: pointer;
+}
+.btn:hover {
+    color: whitesmoke;
+    background-color: var(--red-color);
+}
+
+/* The CSS for the hamburger menu. */
+#ham-btn {
+    display: none;
+    position: fixed;
+    color: white;
+    right: 20px;
+    top: 13px;
+}
+#ham-bar {
+    max-height: 0px;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+}
+#ham-bar .nav-items {
+    padding: 10px;
+    margin-left: auto;
+}
+
+/* The CSS for the heading. */
+#heading-main {
+    color: var(--dark-color);
+    font-weight: 500;
+    padding: 2px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    text-align: center;
+    margin-top: 50px;
+}
+#headin-in {
+    background-color: var(--yellow-color);
+}
+
+/* The CSS for the cards. */
+#main-2 {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 25px;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.card-layout {
+    cursor: pointer;
+    padding: 5px;
+    min-width: 200px;
+    max-width: 300px;
+    margin: 30px;
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    font-weight: 300;
+    font-family: var(--poppins-font);
+    font-size: 15px;
+    width: 25%;
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+}
+.card-layout:hover {
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.25), 0 0px 15px rgba(0, 0, 0, 0.22);
+}
+.hero-id {
+    display: none;
+}
+.hero-img-container {
+    width: 100%;
+}
+.hero-img {
+    max-height: 400px;
+    width: 100%;
+}
+.hero-name {
+    text-align: center;
+}
+
+.card-body {
+    font-size: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.starred {
+    color: red;
+    margin-left: auto;
+}
+
+/* The CSS for the Notification. */
+#toast-div {
+    color: white;
+    opacity: 0;
+    border-radius: 5px;
+    transition: opacity 0.2s ease-in-out;
+    position: fixed;
+    bottom: 30px;
+    left: 10px;
+    background-color: var(--red-color);
+    padding: 5px;
+    font-family: var(--poppins-font);
+    font-size: 20px;
+    max-width: 150px;
+    text-align: center;
+}
+
+/* Making the search bar and the name input smaller. */
+@media screen and (max-width: 700px) {
+    #search-bar {
+        margin-left: 0px;
+    }
+
+    #name-input {
+        width: 200px;
+    }
+
+    #nav-bar {
+        flex-direction: column;
+    }
+
+    #nav-bar .nav-items {
+        display: none;
+    }
+
+    #ham-btn {
+        display: block;
+    }
+
+    #heading-main {
+        font-size: 35px;
+    }
+}
+
+/* Making the name input smaller. */
+@media screen and (max-width: 360px) {
+    #name-input {
+        width: 150px;
+    }
+}
